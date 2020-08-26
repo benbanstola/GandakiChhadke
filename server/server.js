@@ -96,8 +96,14 @@ app.get('/api/getVideo',(req,res)=>{
    
     Videos.findById(id,(err,videos)=>{
         if (err) return res.json({err})
-        res.json({videos:videos})
+        Videos.find({_id: {$gt: id}}).sort({_id: 1 }).limit(1).exec((err,next)=>{
+            if (err) return res.json({err})
+            Videos.find({_id: {$lt: id}}).sort({_id: -1 }).limit(1).exec((err,previous)=>{
+                if (err) return res.json({err})
+                res.json({videos:videos, next:next, previous:previous})
+        })
     })         
+})
 })
 
 const port= process.env.port|| 3001;

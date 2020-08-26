@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import classes from './home.module.css';
-import { getVideos, getAll} from '../actions/action';
-import Titlevideo from '../components/showVideos/titleVideo.js';
-import Showvideo from '../components/showVideos/showvideo';
-import Everyweek from '../components/everyweek';
-import Follow from '../components/additional/follow';
-import Shownews from '../components/news/news';
-import About from '../components/about/about';
-import Spinner from '../UI/spinner';
+import {getAll} from '../../actions/action';
+import Titlevideo from '../../components/showVideos/titleVideo.js';
+import Showvideo from '../../components/showVideos/showvideo';
+import Everyweek from '../../components/everyweek';
+import Follow from '../../components/additional/follow';
+import Shownews from '../../components/news/news';
+import About from '../../components/about/about';
+import Spinner from '../../UI/spinner';
 import { Link } from 'react-router-dom';
 class Home extends Component {
 state={
@@ -59,8 +59,9 @@ renderPopularItems=(videos)=>{
 }
 
 const mapStateToProps = (state, ownProps) => {
+    console.log("home state",state)
      return {
-         videos: state.videos
+         videos: state.all
      }
 }
 export default connect(mapStateToProps)(Home);

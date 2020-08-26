@@ -14,7 +14,7 @@ export function getVideo(props){
         payload:request
     }
     }
-    export function getAll(limit,skip){
+export function getAll(limit,skip){
         const request= axios.get(`/api/getVideos?limit=${limit}&?skip=${skip}`)
 
         

@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {getVideo} from '../../../actions/action';
 import Spinner from '../../../UI/spinner';
 import classes from './openvideo.module.css';
+import Showvideo from '../../showVideos/showvideo';
 
 class Openview extends Component {
   state = {  }
@@ -10,10 +11,10 @@ class Openview extends Component {
 
 
 componentWillMount(){
+ 
     this.props.dispatch(getVideo(this.props.match.params.id))
 }
 renderItems=(videos)=>{
-  
   return(
     videos.list?<div className={classes.container}>
       <p className={classes.title}> {videos.list.videos.title}</p>
@@ -25,6 +26,17 @@ renderItems=(videos)=>{
 </div>:<Spinner />
   
   )}
+  rendernextItems=(videos)=>{
+    console.log("here list",videos.list)
+    return(
+      videos.list?<div>
+        <Showvideo {...videos.list.next[0]} />
+        <Showvideo {...videos.list.previous[0]} />
+
+      </div>:<Spinner />
+   
+      
+      )}
   
   render() { 
 
@@ -32,6 +44,10 @@ renderItems=(videos)=>{
     return (<div>
        <div className={classes.videos}>
                  { this.renderItems(this.props.videos)}
+                 <p className={classes.related}> Related Videos</p>
+                 { this.rendernextItems(this.props.videos)}
+                 
+
              </div> 
 
     </div>  );
@@ -40,7 +56,7 @@ renderItems=(videos)=>{
 
 const mapStateToProps = (state, ownProps) => {
   return {
-      videos: state.videos
+      videos: state.video
   }
 }
  

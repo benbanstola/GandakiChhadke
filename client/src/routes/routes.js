@@ -1,15 +1,19 @@
 import React from 'react';
 import {Switch,Route,BrowserRouter} from 'react-router-dom';
-import Home from '../containers/home';
+import Home from '../containers/home/home';
 import Layout from '../hoc/layout';
 import Openvideo from '../components/openview/videos/openvideo';
 import Videos from '../containers/videos/video';
+import Scrolltop from '../hoc/scrolltotop';
+
+
 const Routes=()=>{
     return(
         <div>
             <Layout>
             
             <Switch>
+                <Scrolltop>
                 <Route path="/" exact component={Home} />
                 <Route path="/videos" exact component={Videos} />
                 <Route path="/videos/:id" exact component={Openvideo} />
@@ -21,6 +25,7 @@ const Routes=()=>{
                 <Route path="/user/logout" exact component={Auth(Logout,true)}/>
                 <Route path="/user" exact component={Auth(Profile,true)} />
                 <Route path="/users/:id" exact component={Auth(UserView,null)} /> */}
+                </Scrolltop>
             </Switch>
           
             </Layout>

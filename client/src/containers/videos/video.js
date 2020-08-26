@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {getVideos } from '../../actions/action';
+import {getVideos} from '../../actions/action';
 import Spinner from '../../UI/spinner';
 import classes from './video.module.css';
 import Showvideos from '../../components/showVideos/showvideo';
@@ -12,7 +12,7 @@ class Videos extends Component {
 
 
   componentWillMount(){
-    console.log("videos",this.props)
+  
     this.props.dispatch(getVideos(10,0))
 }
 renderItems=(videos)=>{
