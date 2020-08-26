@@ -1,0 +1,13 @@
+.navitems{
+    font-weight: 500;
+    font-size: 18px;
+    padding:12px;
+    border-top: 0.2px solid #1e272e ;
+    margin-bottom: 7px;
+}
+.navitems a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+
+}

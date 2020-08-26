@@ -1,0 +1,16 @@
+.container{
+    display:grid;
+    height:75vh;
+    width:100%;
+    background-image: linear-gradient(#3d3d3dc5,#3d3d3dc5),url('../images/everyweek.jpg');
+    background-position: left;
+  
+}
+
+.text1{
+    align-self:center;
+    color:#ff4757;
+    text-align: center;
+    font-size: 400%;
+    font-weight: 700;
+}

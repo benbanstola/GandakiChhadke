@@ -1,0 +1,25 @@
+header{
+    background: #171e24;
+    height:60px;
+    position: relative;
+}
+.openbar{
+    padding-left: 5px;
+    padding-top: 5px;
+   position: absolute;
+}
+.awesome{
+   color: whitesmoke;
+   padding: 10px;
+   cursor: pointer;
+}
+.logo{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-family: 'sans-serif';
+    padding-top: 12px;
+    padding-left:37px;
+    display: block;
+    text-decoration: none;
+}

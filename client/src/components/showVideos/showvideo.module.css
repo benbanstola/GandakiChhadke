@@ -1,0 +1,46 @@
+.toppic{
+    width:120px;
+    height:120px;
+    margin: -10% 0;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: center;
+    border-radius: 4px;
+    
+}
+.imgcontainer{
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    justify-self: center;
+    align-self: end;
+}
+
+.container{
+    padding-bottom: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 20px;
+    border-bottom: 0.3px solid #ced6e0;
+}
+.title{
+    align-self: start;
+    font-weight: 500;
+    font-size:18px;
+    padding-left: 10px;
+    padding-right: 7px;
+}
+.subtle{
+    position: absolute;
+    bottom:5%;
+    left: -40%;
+    font-weight: 100;
+    font-size:10px;
+    color: gray;
+   
+}
+
+
+
+    

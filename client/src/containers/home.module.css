@@ -1,0 +1,37 @@
+.click{
+    margin: 5px auto;
+    display: block;
+    background-color: #273c75;
+    border-radius:27px;
+    cursor:pointer;
+    color:white ;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+}
+.click:hover {
+    background-color:#192a56;
+}
+.click:active {
+     position:relative;
+      top:1px;
+}
+.topic{
+    width: fit-content;
+    text-align: left;
+    font-weight: 500;
+    font-size:30px;
+   padding: 5px 20px;
+    background-color: #273c75;
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 0;
+
+}
+@media only screen and (min-width: 992px) {
+  div{
+      width:98%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  }
