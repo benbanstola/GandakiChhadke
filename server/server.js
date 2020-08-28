@@ -8,11 +8,9 @@ const {Landlord}=require('./models/users');
 const {Videos}=require('./models/videos');
 
 const {Auth}=require('./middleware/auth');
-require('dotenv').config('./config/config');
 mongoose.Promise=global.Promise;
-const uri="mongodb+srv://Ben:junkkoid123@cluster0.pmofv.mongodb.net/mystory?retryWrites=true&w=majority"
 // mongoose.connect(config.DATABASE,{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
-mongoose.connect(uri,{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
+mongoose.connect("mongodb+srv://Ben:junkkoid123@cluster0.pmofv.mongodb.net/mystory?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
 
 app.use(bodyParser.json());
 app.use(cookieParser()); 
