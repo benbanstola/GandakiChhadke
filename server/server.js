@@ -6,7 +6,7 @@ const config=require('./config/config').get(process.env.NODE_ENV);
 const app=express();
 const {Landlord}=require('./models/users');
 const {Videos}=require('./models/videos');
-
+require('dotenv').config('./config/config');
 const {Auth}=require('./middleware/auth');
 mongoose.Promise=global.Promise;
 mongoose.connect(config.DATABASE,{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
