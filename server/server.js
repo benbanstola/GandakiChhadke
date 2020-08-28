@@ -8,7 +8,7 @@ const {Landlord}=require('./models/users');
 const {Videos}=require('./models/videos');
 
 const {Auth}=require('./middleware/auth');
-require('dotenv').config();
+require('dotenv').config('./config/config');
 mongoose.Promise=global.Promise;
 mongoose.connect(config.DATABASE,{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
 
