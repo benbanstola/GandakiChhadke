@@ -16,38 +16,38 @@ const SidenavItems = () => {
         },
         {
             type:'navItem',
-            icon:'home',
+            icon:'play-circle',
             text:'Videos',
             link:'/videos',
             restricted:false
         },
         {
             type:'navItem',
-            icon:'home',
+            icon:'rss',
             text:'News',
             link:'/news',
             restricted:false
         },
-        {
-            type:'navItem',
-            icon:'user',
-            text:'Login',
-            link:'/login',
-            restricted:false,
-        },
+        // {
+        //     type:'navItem',
+        //     icon:'user',
+        //     text:'Login',
+        //     link:'/login',
+        //     restricted:false,
+        // },
        
        
-        {
-            type:'navItem',
-            icon:'user',
-            text:'Logout',
-            link:'/user/logout',
-            restricted:false
-        },
+        // {
+        //     type:'navItem',
+        //     icon:'user',
+        //     text:'Logout',
+        //     link:'/user/logout',
+        //     restricted:false
+        // },
         {
             type:'navItem',
             icon:'info',
-            text:'About us',
+            text:'About',
             link:'/about',
             restricted:false
         }

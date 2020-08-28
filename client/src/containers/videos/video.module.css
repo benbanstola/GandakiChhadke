@@ -12,13 +12,12 @@ margin-left: 0;
 .click{
     width: 100px;
     margin: 5px auto;
-    display: block;
     background-color: #273c75;
     border-radius:2px;
     cursor:pointer;
     color:white ;
     font-size:17px;
-    padding:2px;
+    padding:1px 1px;
     text-decoration:none;
 }
 .click:hover {
@@ -31,4 +30,5 @@ margin-left: 0;
 .buttoncontainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }

@@ -5,6 +5,7 @@ import Layout from '../hoc/layout';
 import Openvideo from '../components/openview/videos/openvideo';
 import Videos from '../containers/videos/video';
 import Scrolltop from '../hoc/scrolltotop';
+import About from '../components/about/about';
 
 
 const Routes=()=>{
@@ -16,6 +17,7 @@ const Routes=()=>{
                 <Scrolltop>
                 <Route path="/" exact component={Home} />
                 <Route path="/videos" exact component={Videos} />
+                <Route path="/about" exact component={About} />
                 <Route path="/videos/:id" exact component={Openvideo} />
 
                 {/* <Route path="/register" exact component={Auth(Signup,false)} />

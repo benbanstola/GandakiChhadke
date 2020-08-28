@@ -23,26 +23,27 @@ renderItems=(videos)=>{
     )}
 
   loadmore = () => {
-    let newcount=this.state.count+10;
-    this.setState({
-      count:newcount
-    })
+    this.setState((prevState, props) => ({
+      count: prevState.count+ 10
+  }),()=>{
+    this.props.dispatch(getVideos(10,this.state.count))
+    let elmnt = document.getElementById("top");
+    elmnt.scrollIntoView();
+  }
+ ); 
+    
    
     
-    this.props.dispatch(getVideos(10,this.state.count))
-    var elmnt = document.getElementById("top");
-    elmnt.scrollIntoView();
 }
 loadless = () => {
-  let newcount=this.state.count-10
-  if (newcount<10) newcount=0
-  this.setState({
-    count:newcount
-  })
-  
+  this.setState((prevState, props) => ({
+    count: prevState.count- 10
+}),()=>{
   this.props.dispatch(getVideos(10,this.state.count))
-  var elmnt = document.getElementById("top");
+  let elmnt = document.getElementById("top");
   elmnt.scrollIntoView();
+}
+); 
 }
   
   render() { 
@@ -56,8 +57,9 @@ loadless = () => {
                 
                  <div className={classes.buttoncontainer}>
                  <div className={classes.click} onClick={this.loadmore}><h3 style={{textAlign:"center",padding:"2px"}}>Next</h3></div>
-                 <div className={classes.click} onClick={this.loadless}><h3 style={{textAlign:"center",padding:"2px"}}>Previous</h3></div>
-                 </div>
+                 {this.state.count>0?
+                  <div className={classes.click} onClick={this.loadless}><h3 style={{textAlign:"center",padding:"2px"}}>Previous</h3></div>
+                  :null} </div>
              </div> 
 
     </div>  );
@@ -65,6 +67,7 @@ loadless = () => {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log("video state",state)
   return {
       videos: state.videos
   }

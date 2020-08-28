@@ -5,17 +5,6 @@ export default function(state={},action){
                 ...state,
                 list:action.payload
             }
-            case 'GET_VIDEO':
-            return{loading:true,
-                ...state,
-                list:action.payload
-            }
-            // case 'GET_ALL':
-            //     return{loading:true,
-            //         ...state,
-            //         list:action.payload
-            //     }
-            
         
         
 

@@ -55,6 +55,7 @@ renderItems=(videos)=>{
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log("openvideo state",state)
   return {
       videos: state.video
   }

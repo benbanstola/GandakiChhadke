@@ -14,7 +14,6 @@ class Home extends Component {
 state={
 }
 componentWillMount(){
-    console.log("home",this.props)
     this.props.dispatch(getAll(3,0))
    
 }
