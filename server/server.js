@@ -9,8 +9,7 @@ const {Videos}=require('./models/videos');
 
 const {Auth}=require('./middleware/auth');
 mongoose.Promise=global.Promise;
-// mongoose.connect(config.DATABASE,{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
-mongoose.connect("mongodb+srv://Ben:junkkoid123@cluster0.pmofv.mongodb.net/mystory?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
+mongoose.connect(config.DATABASE,{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true})
 
 app.use(bodyParser.json());
 app.use(cookieParser()); 
